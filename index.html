@@ -1419,6 +1419,7 @@
           padding-left: 40px;
           padding-right: 40px;
           padding-bottom: 60px;
+          align-items: flex-start;
         }
         .music_1709_24553,
         .music_1786_14101,
@@ -1429,6 +1430,8 @@
         .music_1786_14110 {
           width: 100%;
           max-width: 100%;
+          margin-left: 0;
+          margin-right: 0;
         }
         .music_1786_14129,
         .music_1786_14142,
@@ -1489,40 +1492,67 @@
          RESPONSIVE — MOBILE (max-width: 600px)
          ================================================ */
       @media (max-width: 600px) {
+        body {
+          overflow-x: hidden;
+        }
         .music_1709_24552 {
           padding-left: 20px;
           padding-right: 20px;
           padding-bottom: 48px;
+          align-items: flex-start;
+          box-sizing: border-box;
+        }
+        /* Force ALL section blocks to flush left with 20px from screen */
+        .music_1709_24553,
+        .music_1786_14101,
+        .music_1709_24580,
+        .music_1786_14127,
+        .music_1786_14104,
+        .music_1786_14107,
+        .music_1786_14110 {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          box-sizing: border-box;
         }
 
         /* ---- HEADER ---- */
         .music_1709_24553 {
-          width: 100%;
+          width: 100% !important;
+          max-width: 100% !important;
           height: auto;
           margin-top: 32px;
-          padding-right: 0;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          padding: 0;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
           gap: 0;
         }
-        /* Left side: photo + name stacked */
+        /* Photo + name: flush left, 20px from screen edge (from container padding) */
         .music_1709_24554 {
-          width: auto;
+          width: auto !important;
           flex-direction: row;
           align-items: center;
           gap: 12px;
           flex: 1;
           min-width: 0;
+          margin: 0 !important;
+          padding: 0;
         }
         .music_1709_24555 {
           width: 44px;
           height: 44px;
           flex-shrink: 0;
+          margin: 0;
         }
         .music_1709_24556 {
           width: auto;
           min-width: 0;
+          margin: 0;
+          padding: 0;
         }
         .music_1709_24557 {
           font-size: 15px;
@@ -1531,33 +1561,60 @@
           height: auto;
           overflow: hidden;
           text-overflow: ellipsis;
+          margin: 0;
+          padding: 0;
         }
         .music_1709_24558 {
           font-size: 13px;
           white-space: nowrap;
           width: auto;
           height: auto;
+          margin: 0;
+          padding: 0;
         }
-        /* Icons — side by side, vertically centred with photo row */
+        /* Icons wrapper — both icons on same baseline */
+        .header-icons {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 8px;
+          flex-shrink: 0;
+        }
+        .header-icons a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+        }
+        /* Reset burger button positioning on mobile */
         .music_1786_14095 {
           position: static;
-          margin-left: 12px;
-          margin-top: 0;
+          margin: 0;
           flex-shrink: 0;
           align-self: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
+        /* Reset telegram icon positioning on mobile */
         .music_1709_24559 {
           position: static;
-          margin-left: 8px;
+          margin: 0;
           flex-shrink: 0;
-          align-self: center;
+          display: block;
           top: auto;
           right: auto;
         }
-        .music_1709_24553 > a {
+
+        /* ---- ABOUT — same left edge as header ---- */
+        .music_1786_14101 {
+          width: 100%;
+          margin-top: 28px;
+          margin-left: 0;
+          margin-right: 0;
+          gap: 8px;
           display: flex;
-          align-items: center;
-          flex-shrink: 0;
+          flex-direction: column;
+          align-items: flex-start;
         }
 
         /* ---- SECTION LABELS (Обо мне, Образование…) ---- */
@@ -1575,15 +1632,6 @@
           margin-bottom: 2px;
         }
 
-        /* ---- ABOUT ---- */
-        .music_1786_14101 {
-          width: 100%;
-          margin-top: 28px;
-          gap: 8px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-        }
         .music_1786_14103 {
           width: 100%;
           white-space: normal;
@@ -1595,7 +1643,7 @@
         }
 
         /* ---- EDUCATION ---- */
-        .music_1709_24580 { width: 100%; margin-top: 24px; }
+        .music_1709_24580 { width: 100%; margin-top: 24px; margin-left: 0; }
         .music_1786_14113 {
           flex-direction: row;
           align-items: baseline;
@@ -1616,7 +1664,7 @@
         .music_1786_14118 { width: 100%; white-space: normal; height: auto; font-size: 13px; }
 
         /* ---- WORK EXPERIENCE ---- */
-        .music_1786_14127 { width: 100%; margin-top: 24px; gap: 10px; }
+        .music_1786_14127 { width: 100%; margin-top: 24px; margin-left: 0; gap: 10px; }
         .music_1786_14128 { white-space: normal; width: auto; height: auto; }
 
         /* Job outer containers */
@@ -1735,6 +1783,7 @@
         .music_1786_14110 {
           width: 100%;
           margin-top: 24px;
+          margin-left: 0;
         }
         .music_1786_14106 { width: 100%; }
         .music_1786_14106_0_78,
@@ -1810,30 +1859,32 @@
             src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/79096849048/8716/81f9/2b5f/93c0a879fdab7bc850e2607a2463082a.jpg" />
           <div class="music_1709_24556"><span class="music_1709_24557">Илья Ячинковский</span><span class="music_1709_24558">Продуктовый дизайнер</span></div>
         </div>
-        <a href="http://yachinkovsky.design.tilda.ws/" target="_blank" style="text-decoration: none;">
-          <div class="music_1786_14095">
-            <div class="music_1786_14096">
-              <svg class="music_1786_14097" width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="9" height="2" rx="1" fill="#ffffff"/>
-              </svg>
-              <div class="music_1786_14100"></div>
+        <div class="header-icons">
+          <a href="http://yachinkovsky.design.tilda.ws/" target="_blank" style="text-decoration: none;">
+            <div class="music_1786_14095">
+              <div class="music_1786_14096">
+                <svg class="music_1786_14097" width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="9" height="2" rx="1" fill="#ffffff"/>
+                </svg>
+                <div class="music_1786_14100"></div>
+              </div>
             </div>
-          </div>
-        </a>
-        <a href="https://t.me/kitkit000192" target="_blank" style="text-decoration: none; display: block;">
-          <svg class="music_1709_24559" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="25" height="25" rx="3" fill="#000000"/>
-            <path d="M5.5 12.2L10.2 14.1L16.5 8.5L11.5 15.2L17.5 17.5L19.5 6.5L5.5 12.2Z" fill="#ffffff" stroke="#ffffff" stroke-width="0.3" stroke-linejoin="round"/>
-            <path d="M10.2 14.1L11.5 18.5L13.5 15.5" fill="#ffffff" stroke="#ffffff" stroke-width="0.3" stroke-linejoin="round"/>
-          </svg>
-        </a>
+          </a>
+          <a href="https://t.me/kitkit000192" target="_blank" style="text-decoration: none;">
+            <svg class="music_1709_24559" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="25" height="25" rx="3" fill="#000000"/>
+              <path d="M5.5 12.2L10.2 14.1L16.5 8.5L11.5 15.2L17.5 17.5L19.5 6.5L5.5 12.2Z" fill="#ffffff" stroke="#ffffff" stroke-width="0.3" stroke-linejoin="round"/>
+              <path d="M10.2 14.1L11.5 18.5L13.5 15.5" fill="#ffffff" stroke="#ffffff" stroke-width="0.3" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
       </div>
       <div class="music_1786_14101">
         <span class="music_1786_14102">Обо мне</span
         ><span class="music_1786_14103"
           >Я уже более 1,5 лет занимаюсь продуктовым дизайном. Проектирую веб и мобильные приложения. Анализирую данные, провожу тестирования для оценки эффективности решений и их последующей
           оптимизации. Работал над B2C продуктами разных размеров, начиная от стартапов, заканчивая крупными компаниями. Я стремлюсь к проекту, в котором ценят безупречный UX, и где моя
-          ответственность будет включать не только дизайн, но и стратегическое влияние на его развитие.</span
+          ответственность будет включать не только дизайн, но и стратегическое влияние <br />на его развитие.</span
         >
       </div>
       <div class="music_1709_24580">
@@ -1857,7 +1908,7 @@
           <span class="music_1786_14130"
             >Разрабатывал проект по улучшению пользовательского интерфейса сайта курса повышения квалификации для преподавателей дисциплин естественнонаучного профиля «Преподавать естественно!».
             Основной задачей от заказчика являлся полный редизайн имеющегося сайта и адаптация под использование на постоянной основе. Растил основные метрики (PPV, ARPU, Page depth, NPS). Инициировал
-            и предлагал решения по стандартизации повторяющихся компонентов интерфейса.</span
+            и предлагал решения <br />по стандартизации повторяющихся компонентов интерфейса.</span
           >
         </div>
         <div class="music_1786_14142">
@@ -1895,10 +1946,10 @@
             ><svg class="music_1786_14178 mts-trigger" onclick="document.getElementById('mts-modal').style.display='flex'" style="cursor:pointer; width:16px; height:16px; position:absolute; top:3px; right:0; bottom:2px; flex-shrink:0;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="job-arrow" width="16" height="16" rx="2" fill="#1f303d"/><path d="M5 11L11 5M8.5 5L11 5L11 7.5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <span class="music_1786_14169"
-            >Разработал проект по созданию концепции AI-компаньона пользовательского интерфейса мобильного банковского приложения. Основной задачей являлось создание идей, как можно изменить или
-            доработать существующее мобильное банковское приложение с помощью Al-компаньона, который учитывает эмоциональное состояние пользователя <br />и активно вовлекает его в достижение
+            >Разработал проект по созданию концепции AI-компаньона пользовательского интерфейса мобильного банковского приложения. Основной задачей являлось создание идей, <br />как можно изменить или
+            доработать существующее мобильное банковское приложение <br />с помощью Al-компаньона, который учитывает эмоциональное состояние пользователя <br />и активно вовлекает его в достижение
             финансовых целей. При этом решение должно учитывать интересы бизнеса - повысить удержание клиентов и увеличить их активность. Растил основные метрики (DAU/MAU, время в приложении, NPS).
-            Снизил уровень Churn Rate.</span
+            Снизил уровень <br />Churn Rate.</span
           >
         </div>
         <div class="music_1786_14181">
@@ -1908,7 +1959,7 @@
             </div>
             <span class="music_1786_14190">Графический дизайнер ChocoWomen</span>
           </div>
-          <span class="music_1786_14182">Работал над созданием упаковок для дубайского шоколада. Подготавливал макеты к печати.</span>
+          <span class="music_1786_14182">Работал над созданием упаковок для дубайского шоколада. Подготавливал макеты <br />к печати.</span>
         </div>
       </div>
       <div class="music_1786_14104">
@@ -1920,7 +1971,7 @@
       <div class="music_1786_14107">
         <span class="music_1786_14108">Инструменты</span
         ><span class="music_1786_14109"
-          >· Figma (хорошо разбираюсь в ней)<br />· FigJam / Miro (для генерации идей в команде)<br />· Adobe Illustrator<br />· Blender 3d (базовый уровень)<br />· Perplexity / DeepSeek / Claude <br />· Tilda</span
+          >· Figma (хорошо разбираюсь в ней)<br />· FigJam / Miro (для генерации идей в команде)<br />· Adobe Illustrator<br />· Blender 3d (базовый уровень)<br />· Perplexity / DeepSeek<br />· Tilda</span
         >
       </div>
       <div class="music_1786_14110">
