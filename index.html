@@ -1378,6 +1378,23 @@
         white-space: pre;
       }
 
+      /* Prevent orphan words on all screen sizes */
+      .music_1786_14103,
+      .music_1786_14130,
+      .music_1786_14143,
+      .music_1786_14156,
+      .music_1786_14169,
+      .music_1786_14182,
+      .music_1786_14106_0_78,
+      .music_1786_14106_79_204,
+      .music_1786_14106_205_362,
+      .music_1786_14109,
+      .music_1786_14112 {
+        orphans: 3;
+        widows: 3;
+        text-wrap: pretty;
+      }
+
       /* Hover effects for clickable job entries */
       .itmo-trigger, .health-trigger, .sogaz-trigger, .mts-trigger { transition: color 0.18s ease; }
       .job-arrow { transition: fill 0.18s ease; }
@@ -1482,50 +1499,61 @@
         .music_1709_24553 {
           width: 100%;
           height: auto;
-          min-height: 60px;
           margin-top: 32px;
           padding-right: 0;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
+          gap: 0;
         }
+        /* Left side: photo + name stacked */
         .music_1709_24554 {
           width: auto;
           flex-direction: row;
           align-items: center;
           gap: 12px;
           flex: 1;
+          min-width: 0;
         }
         .music_1709_24555 {
           width: 44px;
           height: 44px;
+          flex-shrink: 0;
         }
-        .music_1709_24556 { width: auto; }
+        .music_1709_24556 {
+          width: auto;
+          min-width: 0;
+        }
         .music_1709_24557 {
           font-size: 15px;
-          white-space: normal;
+          white-space: nowrap;
           width: auto;
           height: auto;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .music_1709_24558 {
           font-size: 13px;
-          white-space: normal;
+          white-space: nowrap;
           width: auto;
           height: auto;
         }
-        /* Icons cluster — stay top-right, side by side */
+        /* Icons — side by side, vertically centred with photo row */
         .music_1786_14095 {
           position: static;
-          margin-left: 8px;
+          margin-left: 12px;
           margin-top: 0;
           flex-shrink: 0;
+          align-self: center;
         }
         .music_1709_24559 {
           position: static;
           margin-left: 8px;
           flex-shrink: 0;
+          align-self: center;
+          top: auto;
+          right: auto;
         }
-        /* Wrapper for icons */
         .music_1709_24553 > a {
           display: flex;
           align-items: center;
@@ -1543,15 +1571,28 @@
           width: auto;
           height: auto;
           font-size: 13px;
+          display: block;
+          margin-bottom: 2px;
         }
 
         /* ---- ABOUT ---- */
         .music_1786_14101 {
           width: 100%;
           margin-top: 28px;
-          gap: 10px;
+          gap: 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
         }
-        .music_1786_14103 { width: 100%; white-space: normal; font-size: 13px; line-height: 1.6; }
+        .music_1786_14103 {
+          width: 100%;
+          white-space: normal;
+          font-size: 13px;
+          line-height: 1.65;
+          word-break: normal;
+          overflow-wrap: break-word;
+          hyphens: none;
+        }
 
         /* ---- EDUCATION ---- */
         .music_1709_24580 { width: 100%; margin-top: 24px; }
@@ -2084,6 +2125,19 @@
           if (e.target === this) this.style.display = 'none';
         });
       });
+
+      // Fix hanging prepositions and conjunctions — add non-breaking space after them
+      function fixHangingWords(node) {
+        if (node.nodeType === 3) { // text node
+          var preps = /(\s)(и|в|на|с|к|о|у|по|за|до|из|от|со|под|над|без|для|при|про|об|не|но|а|то|же|бы|ли|или|что|как|так|уже|ещё|чем|это|все|всё)(\s)/gi;
+          node.textContent = node.textContent.replace(preps, '$1$2\u00A0');
+        } else if (node.nodeType === 1 && node.childNodes) {
+          node.childNodes.forEach(fixHangingWords);
+        }
+      }
+
+      // Apply to main content only (not modals)
+      document.querySelector('.music_1709_24552') && fixHangingWords(document.querySelector('.music_1709_24552'));
     </script>
   </body>
 </html>
