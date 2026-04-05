@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+      }
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+      }
+      .justify-start {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .justify-center {
+        display: flex;
+        justify-content: center;
+      }
+      .justify-end {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .justify-between {
+        display: flex;
+        justify-content: space-between;
+      }
+      .items-start {
+        display: flex;
+        align-items: flex-start;
+      }
+      .items-end {
+        display: flex;
+        align-items: flex-end;
+      }
+      .items-center {
+        display: flex;
+        align-items: center;
+      }
+      .no-shrink {
+        flex-shrink: 0;
+      }
+
+      .music_1709_24552 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        background-color: #f0f4f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        isolation: isolate;
+        min-height: 100%;
+        padding-bottom: 86px;
+      }
+
+      .music_1709_24553 {
+        position: relative;
+        width: 856px;
+        height: 125px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 0;
+        margin-top: 86px;
+      }
+
+      .music_1709_24554 {
+        width: 200px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 18px;
+        height: max-content;
+        margin-top: auto;
+        margin-bottom: auto;
+        z-index: 0;
+        margin-left: 0;
+      }
+
+      .music_1709_24555 {
+        width: 61px;
+        height: 61px;
+        flex-shrink: 0;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+
+      .music_1709_24556 {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 4px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_1709_24557 {
+        width: 159px;
+        height: 21px;
+        flex-shrink: 0;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #1f303d;
+        white-space: pre;
+      }
+
+      .music_1709_24558 {
+        width: 200px;
+        height: 21px;
+        flex-shrink: 0;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #b6c0c2;
+        white-space: pre;
+      }
+
+      .music_1786_14095 {
+        width: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 6px;
+        padding-right: 6px;
+        padding-bottom: 6px;
+        padding-left: 6px;
+        border-radius: 3px;
+        background-color: #000000;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        margin-top: 18px;
+      }
+
+      .music_1786_14096 {
+        width: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_1786_14097 {
+        width: 9px;
+        height: 2px;
+        position: relative;
+        flex-shrink: 0;
+        margin: 0;
+        display: block;
+      }
+
+      .music_1786_14100 {
+        height: 10px;
+        flex-shrink: 0;
+        align-self: stretch;
+        border-radius: 2px;
+        background-color: #ffffff;
+      }
+
+      .music_1709_24559 {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 18px;
+        left: auto;
+        right: 43px;
+        z-index: 1;
+      }
+
+      .music_1786_14101 {
+        width: 856px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+        position: relative;
+        z-index: 1;
+        margin-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14102 {
+        width: 108px;
+        flex-shrink: 0;
+        font-size: 15px;
+        font-family: 'Helvetica Neue';
+        font-weight: 500;
+        line-height: 18px;
+        color: #b6c0c2;
+        white-space: pre;
+      }
+
+      .music_1786_14103 {
+        width: 856px;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #1f303d;
+      }
+
+      .music_1709_24580 {
+        position: relative;
+        width: 856px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 5;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1709_24581 {
+        font-size: 15px;
+        font-family: 'Helvetica Neue';
+        font-weight: 500;
+        line-height: 18px;
+        color: #b6c0c2;
+        white-space: pre;
+        position: relative;
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      .music_1786_14113 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 14px;
+        position: relative;
+        margin-top: 15px;
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .music_1786_14114 {
+        width: 77px;
+        flex-shrink: 0;
+        line-height: 17px;
+        white-space: pre;
+      }
+
+      .music_1786_14114_0_11 {
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14114_11_12 {
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 700;
+        line-height: 17px;
+        color: #1f303d;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14115 {
+        width: 354px;
+        height: 17px;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #1f303d;
+        white-space: pre;
+      }
+
+      .music_1786_14116 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+        position: relative;
+        margin-top: 6px;
+        margin-left: 0;
+      }
+
+      .music_1786_14117 {
+        width: 81px;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+      }
+
+      .music_1786_14118 {
+        width: 290px;
+        height: 17px;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #1f303d;
+        white-space: pre;
+      }
+
+      .music_1786_14127 {
+        width: 856px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+        position: relative;
+        z-index: 6;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14128 {
+        width: 114px;
+        height: 18px;
+        flex-shrink: 0;
+        font-size: 15px;
+        font-family: 'Helvetica Neue';
+        font-weight: 500;
+        line-height: normal;
+        color: #b6c0c2;
+        white-space: pre;
+      }
+
+      .music_1786_14129 {
+        position: relative;
+        width: 856px;
+        height: 128px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_1786_14131 {
+        position: relative;
+        width: 695px;
+        height: 21px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 1;
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      .music_1786_14133 {
+        position: relative;
+        width: 210px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 1;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
+      }
+
+      .music_1786_14137 {
+        position: relative;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+        z-index: 3;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 4px;
+        min-width: 35px;
+      }
+
+      .music_1786_14134 {
+        position: relative;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        height: auto;
+        z-index: 0;
+        margin-left: 7px;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
+      }
+
+      .music_1786_14138 {
+        position: relative;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+        z-index: 4;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 4px;
+      }
+
+      .music_1786_14135 {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        height: auto;
+        z-index: 1;
+        margin-left: 7px;
+        align-self: stretch;
+      }
+
+      .music_1786_14136 {
+        width: 16px;
+        height: 9px;
+        flex-shrink: 0;
+        position: relative;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: auto;
+        margin-bottom: 5px;
+        z-index: 2;
+        display: block;
+      }
+
+      .music_1786_14132 {
+        position: absolute;
+        top: 0;
+        left: auto;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        right: 21px;
+        bottom: 0;
+        height: auto;
+        z-index: 0;
+      }
+
+      .music_1786_14139 {
+        width: 16px;
+        height: auto;
+        position: absolute;
+        top: 3px;
+        left: auto;
+        right: 0;
+        bottom: 2px;
+        z-index: 2;
+      }
+
+      .music_1786_14130 {
+        width: 609px;
+        position: absolute;
+        top: auto;
+        left: auto;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #b6c0c2;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+      }
+
+      .music_1786_14142 {
+        position: relative;
+        width: 856px;
+        height: 77px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_1786_14144 {
+        position: relative;
+        width: 665px;
+        height: 21px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 1;
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      .music_1786_14146 {
+        position: relative;
+        width: 210px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 1;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
+      }
+
+      .music_1786_14150 {
+        position: relative;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+        z-index: 3;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 4px;
+        min-width: 35px;
+      }
+
+      .music_1786_14147 {
+        position: relative;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        height: auto;
+        z-index: 0;
+        margin-left: 7px;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
+      }
+
+      .music_1786_14151 {
+        position: relative;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+        z-index: 4;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 4px;
+      }
+
+      .music_1786_14148 {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        height: auto;
+        z-index: 1;
+        margin-left: 7px;
+        align-self: stretch;
+      }
+
+      .music_1786_14149 {
+        width: 16px;
+        height: 9px;
+        flex-shrink: 0;
+        position: relative;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: auto;
+        margin-bottom: 5px;
+        z-index: 2;
+        display: block;
+      }
+
+      .music_1786_14145 {
+        position: absolute;
+        top: 0;
+        left: auto;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        right: 21px;
+        bottom: 0;
+        height: auto;
+        z-index: 0;
+      }
+
+      .music_1786_14152 {
+        width: 16px;
+        height: auto;
+        position: absolute;
+        top: 3px;
+        left: auto;
+        right: 0;
+        bottom: 2px;
+        z-index: 2;
+      }
+
+      .music_1786_14143 {
+        width: 609px;
+        position: absolute;
+        top: auto;
+        left: auto;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #b6c0c2;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+      }
+
+      .music_1786_14155 {
+        position: relative;
+        width: 856px;
+        height: 77px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_1786_14157 {
+        position: relative;
+        width: 692px;
+        height: 21px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 1;
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      .music_1786_14159 {
+        position: relative;
+        width: 210px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 1;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
+      }
+
+      .music_1786_14163 {
+        position: relative;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+        z-index: 3;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 4px;
+        min-width: 35px;
+      }
+
+      .music_1786_14160 {
+        position: relative;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        height: auto;
+        z-index: 0;
+        margin-left: 7px;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
+      }
+
+      .music_1786_14164 {
+        position: relative;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+        z-index: 4;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 4px;
+      }
+
+      .music_1786_14161 {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        height: auto;
+        z-index: 1;
+        margin-left: 7px;
+        align-self: stretch;
+      }
+
+      .music_1786_14162 {
+        width: 16px;
+        height: 9px;
+        flex-shrink: 0;
+        position: relative;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: auto;
+        margin-bottom: 5px;
+        z-index: 2;
+        display: block;
+      }
+
+      .music_1786_14158 {
+        position: absolute;
+        top: 0;
+        left: auto;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        right: 21px;
+        bottom: 0;
+        height: auto;
+        z-index: 0;
+      }
+
+      .music_1786_14165 {
+        width: 16px;
+        height: auto;
+        position: absolute;
+        top: 3px;
+        left: auto;
+        right: 0;
+        bottom: 2px;
+        z-index: 2;
+      }
+
+      .music_1786_14156 {
+        width: 609px;
+        position: absolute;
+        top: auto;
+        left: auto;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #b6c0c2;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+      }
+
+      .music_1786_14168 {
+        position: relative;
+        width: 856px;
+        height: 162px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_1786_14170 {
+        position: relative;
+        width: 595px;
+        height: 21px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 1;
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      .music_1786_14172 {
+        position: relative;
+        width: 210px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 1;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
+      }
+
+      .music_1786_14176 {
+        position: relative;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+        z-index: 3;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 4px;
+        min-width: 35px;
+      }
+
+      .music_1786_14173 {
+        position: relative;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        height: auto;
+        z-index: 0;
+        margin-left: 7px;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
+      }
+
+      .music_1786_14177 {
+        position: relative;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+        z-index: 4;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 4px;
+      }
+
+      .music_1786_14174 {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        height: auto;
+        z-index: 1;
+        margin-left: 7px;
+        align-self: stretch;
+      }
+
+      .music_1786_14175 {
+        width: 16px;
+        height: 9px;
+        flex-shrink: 0;
+        position: relative;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: auto;
+        margin-bottom: 5px;
+        z-index: 2;
+        display: block;
+      }
+
+      .music_1786_14171 {
+        position: absolute;
+        top: 0;
+        left: auto;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        right: 21px;
+        bottom: 0;
+        height: auto;
+        z-index: 0;
+      }
+
+      .music_1786_14178 {
+        width: 16px;
+        height: auto;
+        position: absolute;
+        top: 3px;
+        left: auto;
+        right: 0;
+        bottom: 2px;
+        z-index: 2;
+      }
+
+      .music_1786_14169 {
+        width: 609px;
+        position: absolute;
+        top: auto;
+        left: auto;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #b6c0c2;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+      }
+
+      .music_1786_14181 {
+        position: relative;
+        width: 856px;
+        height: 60px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_1786_14183 {
+        position: relative;
+        width: 856px;
+        height: 21px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 1;
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      .music_1786_14184 {
+        position: relative;
+        width: 210px;
+        height: auto;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 1;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
+      }
+
+      .music_1786_14188 {
+        position: relative;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+        z-index: 3;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 4px;
+        min-width: 35px;
+      }
+
+      .music_1786_14185 {
+        position: relative;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        height: auto;
+        z-index: 0;
+        margin-left: 7px;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
+      }
+
+      .music_1786_14187 {
+        width: 16px;
+        height: 9px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: auto;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .music_1786_14189 {
+        position: relative;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #1f303d;
+        white-space: pre;
+        z-index: 4;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 4px;
+      }
+
+      .music_1786_14186 {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        height: auto;
+        z-index: 1;
+        margin-left: 7px;
+        align-self: stretch;
+      }
+
+      .music_1786_14190 {
+        position: absolute;
+        top: 0;
+        left: 247px;
+        font-size: 18px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 21px;
+        color: #1f303d;
+        white-space: pre;
+        right: auto;
+        bottom: 0;
+        height: auto;
+        z-index: 0;
+      }
+
+      .music_1786_14182 {
+        width: 609px;
+        position: absolute;
+        top: auto;
+        left: auto;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #b6c0c2;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+      }
+
+      .music_1786_14104 {
+        width: 856px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+        position: relative;
+        z-index: 2;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14105 {
+        width: 67px;
+        height: 18px;
+        flex-shrink: 0;
+        font-size: 15px;
+        font-family: 'Helvetica Neue';
+        font-weight: 500;
+        line-height: normal;
+        color: rgba(0, 0, 0, 0.3);
+        white-space: pre;
+      }
+
+      .music_1786_14106 {
+        width: 564px;
+        flex-shrink: 0;
+        line-height: normal;
+      }
+
+      .music_1786_14106_0_78 {
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14106_78_79 {
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 500;
+        line-height: normal;
+        color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14106_79_204 {
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14106_204_205 {
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 500;
+        line-height: normal;
+        color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14106_205_362 {
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14107 {
+        width: 856px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+        position: relative;
+        z-index: 3;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14108 {
+        width: 110px;
+        height: 17px;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 500;
+        line-height: normal;
+        color: rgba(0, 0, 0, 0.3);
+        white-space: pre;
+      }
+
+      .music_1786_14109 {
+        width: 564px;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: normal;
+        color: #000000;
+      }
+
+      .music_1786_14110 {
+        width: 856px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+        position: relative;
+        z-index: 4;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .music_1786_14111 {
+        width: 49px;
+        height: 17px;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 500;
+        line-height: normal;
+        color: rgba(0, 0, 0, 0.3);
+        white-space: pre;
+      }
+
+      .music_1786_14112 {
+        width: 729px;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: 'Helvetica Neue';
+        font-weight: 400;
+        line-height: 17px;
+        color: #000000;
+        white-space: pre;
+      }
+
+      /* Hover effects for clickable job entries */
+      .itmo-trigger, .health-trigger, .sogaz-trigger, .mts-trigger { transition: color 0.18s ease; }
+      .job-arrow { transition: fill 0.18s ease; }
+
+      .music_1786_14131:hover .music_1786_14132 { color: #007bff; }
+      .music_1786_14131:hover .job-arrow { fill: #007bff; }
+
+      .music_1786_14144:hover .music_1786_14145 { color: #007bff; }
+      .music_1786_14144:hover .job-arrow { fill: #007bff; }
+
+      .music_1786_14157:hover .music_1786_14158 { color: #007bff; }
+      .music_1786_14157:hover .job-arrow { fill: #007bff; }
+
+      .music_1786_14170:hover .music_1786_14171 { color: #007bff; }
+      .music_1786_14170:hover .job-arrow { fill: #007bff; }
+
+      /* ================================================
+         RESPONSIVE — TABLET portrait + landscape (max-width: 1024px)
+         ================================================ */
+      @media (max-width: 1024px) {
+        .music_1709_24552 {
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-bottom: 60px;
+        }
+        .music_1709_24553,
+        .music_1786_14101,
+        .music_1709_24580,
+        .music_1786_14127,
+        .music_1786_14104,
+        .music_1786_14107,
+        .music_1786_14110 {
+          width: 100%;
+          max-width: 100%;
+        }
+        .music_1786_14129,
+        .music_1786_14142,
+        .music_1786_14155,
+        .music_1786_14168,
+        .music_1786_14181 {
+          width: 100%;
+          height: auto;
+        }
+        .music_1786_14103,
+        .music_1786_14106,
+        .music_1786_14109,
+        .music_1786_14112 {
+          width: 100%;
+        }
+        .music_1786_14115 { width: auto; white-space: normal; height: auto; }
+        .music_1786_14118 { width: auto; white-space: normal; height: auto; }
+        .music_1786_14131,
+        .music_1786_14144,
+        .music_1786_14157,
+        .music_1786_14170,
+        .music_1786_14183 {
+          width: 100%;
+        }
+        /* Job descriptions — pull out of absolute */
+        .music_1786_14130,
+        .music_1786_14143,
+        .music_1786_14156,
+        .music_1786_14169,
+        .music_1786_14182 {
+          position: static;
+          width: 100%;
+          white-space: normal;
+          margin-top: 8px;
+        }
+        /* Job titles — static */
+        .music_1786_14132,
+        .music_1786_14145,
+        .music_1786_14158,
+        .music_1786_14171 {
+          position: static;
+          white-space: normal;
+          height: auto;
+          flex: 1;
+          padding-right: 22px;
+          margin-left: 10px;
+        }
+        .music_1786_14190 {
+          position: static;
+          white-space: normal;
+          height: auto;
+          flex: 1;
+          margin-left: 10px;
+        }
+      }
+
+      /* ================================================
+         RESPONSIVE — MOBILE (max-width: 600px)
+         ================================================ */
+      @media (max-width: 600px) {
+        .music_1709_24552 {
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 48px;
+        }
+
+        /* ---- HEADER ---- */
+        .music_1709_24553 {
+          width: 100%;
+          height: auto;
+          min-height: 60px;
+          margin-top: 32px;
+          padding-right: 0;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .music_1709_24554 {
+          width: auto;
+          flex-direction: row;
+          align-items: center;
+          gap: 12px;
+          flex: 1;
+        }
+        .music_1709_24555 {
+          width: 44px;
+          height: 44px;
+        }
+        .music_1709_24556 { width: auto; }
+        .music_1709_24557 {
+          font-size: 15px;
+          white-space: normal;
+          width: auto;
+          height: auto;
+        }
+        .music_1709_24558 {
+          font-size: 13px;
+          white-space: normal;
+          width: auto;
+          height: auto;
+        }
+        /* Icons cluster — stay top-right, side by side */
+        .music_1786_14095 {
+          position: static;
+          margin-left: 8px;
+          margin-top: 0;
+          flex-shrink: 0;
+        }
+        .music_1709_24559 {
+          position: static;
+          margin-left: 8px;
+          flex-shrink: 0;
+        }
+        /* Wrapper for icons */
+        .music_1709_24553 > a {
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
+        }
+
+        /* ---- SECTION LABELS (Обо мне, Образование…) ---- */
+        .music_1786_14102,
+        .music_1709_24581,
+        .music_1786_14128,
+        .music_1786_14105,
+        .music_1786_14108,
+        .music_1786_14111 {
+          white-space: normal;
+          width: auto;
+          height: auto;
+          font-size: 13px;
+        }
+
+        /* ---- ABOUT ---- */
+        .music_1786_14101 {
+          width: 100%;
+          margin-top: 28px;
+          gap: 10px;
+        }
+        .music_1786_14103 { width: 100%; white-space: normal; font-size: 13px; line-height: 1.6; }
+
+        /* ---- EDUCATION ---- */
+        .music_1709_24580 { width: 100%; margin-top: 24px; }
+        .music_1786_14113 {
+          flex-direction: row;
+          align-items: baseline;
+          gap: 10px;
+          margin-top: 10px;
+        }
+        .music_1786_14114 { width: auto; white-space: normal; flex-shrink: 0; }
+        .music_1786_14114_0_11,
+        .music_1786_14114_11_12 { white-space: normal; font-size: 13px; }
+        .music_1786_14115 { width: 100%; white-space: normal; height: auto; font-size: 13px; }
+        .music_1786_14116 {
+          flex-direction: row;
+          align-items: baseline;
+          gap: 10px;
+          margin-top: 6px;
+        }
+        .music_1786_14117 { width: auto; white-space: normal; flex-shrink: 0; font-size: 13px; }
+        .music_1786_14118 { width: 100%; white-space: normal; height: auto; font-size: 13px; }
+
+        /* ---- WORK EXPERIENCE ---- */
+        .music_1786_14127 { width: 100%; margin-top: 24px; gap: 10px; }
+        .music_1786_14128 { white-space: normal; width: auto; height: auto; }
+
+        /* Job outer containers */
+        .music_1786_14129,
+        .music_1786_14142,
+        .music_1786_14155,
+        .music_1786_14168,
+        .music_1786_14181 {
+          width: 100%;
+          height: auto;
+          padding-bottom: 16px;
+          border-bottom: 1px solid #dde2e4;
+        }
+        .music_1786_14129 { border-bottom: none; }
+
+        /* Job top rows — date block stacked above title */
+        .music_1786_14131,
+        .music_1786_14144,
+        .music_1786_14157,
+        .music_1786_14170,
+        .music_1786_14183 {
+          width: 100%;
+          height: auto;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 4px;
+          position: relative;
+        }
+
+        /* Date containers */
+        .music_1786_14133,
+        .music_1786_14146,
+        .music_1786_14159,
+        .music_1786_14172,
+        .music_1786_14184 {
+          width: auto;
+          flex-shrink: 0;
+          align-self: auto;
+        }
+
+        /* Date text sizing */
+        .music_1786_14137, .music_1786_14138,
+        .music_1786_14150, .music_1786_14151,
+        .music_1786_14163, .music_1786_14164,
+        .music_1786_14176, .music_1786_14177,
+        .music_1786_14188, .music_1786_14189 {
+          font-size: 12px;
+        }
+        .music_1786_14134, .music_1786_14135,
+        .music_1786_14147, .music_1786_14148,
+        .music_1786_14160, .music_1786_14161,
+        .music_1786_14173, .music_1786_14174,
+        .music_1786_14185, .music_1786_14186 {
+          font-size: 14px;
+        }
+
+        /* Job titles — static flow */
+        .music_1786_14132,
+        .music_1786_14145,
+        .music_1786_14158,
+        .music_1786_14171 {
+          position: static;
+          white-space: normal;
+          height: auto;
+          font-size: 14px;
+          margin-left: 0;
+          padding-right: 22px;
+          line-height: 1.4;
+          flex: unset;
+          width: 100%;
+        }
+        /* ChocoWomen title */
+        .music_1786_14190 {
+          position: static;
+          white-space: normal;
+          height: auto;
+          font-size: 14px;
+          margin-left: 0;
+          padding-right: 22px;
+          width: 100%;
+          left: auto;
+        }
+
+        /* Arrow buttons — absolute to top-right of job row */
+        .music_1786_14139,
+        .music_1786_14152,
+        .music_1786_14165,
+        .music_1786_14178 {
+          top: auto;
+          bottom: auto;
+          right: 0;
+          position: absolute;
+          /* vertically center within the title line */
+          top: calc(24px + 4px); /* below date row */
+        }
+
+        /* Job descriptions */
+        .music_1786_14130,
+        .music_1786_14143,
+        .music_1786_14156,
+        .music_1786_14169,
+        .music_1786_14182 {
+          position: static;
+          width: 100%;
+          white-space: normal;
+          margin-top: 8px;
+          font-size: 13px;
+          line-height: 1.6;
+          right: auto;
+          bottom: auto;
+        }
+
+        /* ---- SKILLS / TOOLS / HOBBIES ---- */
+        .music_1786_14104,
+        .music_1786_14107,
+        .music_1786_14110 {
+          width: 100%;
+          margin-top: 24px;
+        }
+        .music_1786_14106 { width: 100%; }
+        .music_1786_14106_0_78,
+        .music_1786_14106_78_79,
+        .music_1786_14106_79_204,
+        .music_1786_14106_204_205,
+        .music_1786_14106_205_362 {
+          white-space: normal;
+          font-size: 13px;
+          line-height: 1.6;
+        }
+        .music_1786_14109 { width: 100%; white-space: normal; font-size: 13px; line-height: 1.6; }
+        .music_1786_14112 { width: 100%; white-space: normal; font-size: 13px; line-height: 1.6; }
+      }
+
+      /* ================================================
+         MOBILE LANDSCAPE (height <= 500px, wide)
+         ================================================ */
+      @media (max-height: 500px) and (orientation: landscape) {
+        .music_1709_24552 {
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-bottom: 32px;
+        }
+        .music_1709_24553 {
+          margin-top: 20px;
+        }
+        .music_1786_14101 { margin-top: 20px; }
+        .music_1709_24580,
+        .music_1786_14127,
+        .music_1786_14104,
+        .music_1786_14107,
+        .music_1786_14110 {
+          margin-top: 18px;
+        }
+        /* Modal padding smaller in landscape */
+        #itmo-modal > div,
+        #health-modal > div,
+        #sogaz-modal > div,
+        #mts-modal > div {
+          padding: 24px;
+          max-height: 90vh;
+        }
+      }
+
+      /* ================================================
+         MODAL — responsive padding on small screens
+         ================================================ */
+      @media (max-width: 600px) {
+        #itmo-modal > div,
+        #health-modal > div,
+        #sogaz-modal > div,
+        #mts-modal > div {
+          padding: 24px 20px;
+          border-radius: 8px;
+          width: calc(100% - 24px);
+        }
+        #itmo-modal > div > div:first-child > div:first-child,
+        #health-modal > div > div:first-child > div:first-child,
+        #sogaz-modal > div > div:first-child > div:first-child,
+        #mts-modal > div > div:first-child > div:first-child {
+          font-size: 15px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="music_1709_24552">
+      <div class="music_1709_24553">
+        <div class="music_1709_24554">
+          <img
+            class="music_1709_24555"
+            src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/79096849048/8716/81f9/2b5f/93c0a879fdab7bc850e2607a2463082a.jpg" />
+          <div class="music_1709_24556"><span class="music_1709_24557">Илья Ячинковский</span><span class="music_1709_24558">Продуктовый дизайнер</span></div>
+        </div>
+        <a href="http://yachinkovsky.design.tilda.ws/" target="_blank" style="text-decoration: none;">
+          <div class="music_1786_14095">
+            <div class="music_1786_14096">
+              <svg class="music_1786_14097" width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9" height="2" rx="1" fill="#ffffff"/>
+              </svg>
+              <div class="music_1786_14100"></div>
+            </div>
+          </div>
+        </a>
+        <a href="https://t.me/kitkit000192" target="_blank" style="text-decoration: none; display: block;">
+          <svg class="music_1709_24559" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="25" height="25" rx="3" fill="#000000"/>
+            <path d="M5.5 12.2L10.2 14.1L16.5 8.5L11.5 15.2L17.5 17.5L19.5 6.5L5.5 12.2Z" fill="#ffffff" stroke="#ffffff" stroke-width="0.3" stroke-linejoin="round"/>
+            <path d="M10.2 14.1L11.5 18.5L13.5 15.5" fill="#ffffff" stroke="#ffffff" stroke-width="0.3" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="music_1786_14101">
+        <span class="music_1786_14102">Обо мне</span
+        ><span class="music_1786_14103"
+          >Я уже более 1,5 лет занимаюсь продуктовым дизайном. Проектирую веб и мобильные приложения. Анализирую данные, провожу тестирования для оценки эффективности решений и их последующей
+          оптимизации. Работал над B2C продуктами разных размеров, начиная от стартапов, заканчивая крупными компаниями. Я стремлюсь к проекту, в котором ценят безупречный UX, и где моя
+          ответственность будет включать не только дизайн, но и стратегическое влияние <br />на его развитие.</span
+        >
+      </div>
+      <div class="music_1709_24580">
+        <span class="music_1709_24581">Образование</span>
+        <div class="music_1786_14113">
+          <div class="music_1786_14114"><span class="music_1786_14114_0_11">2020 - 2024</span><span class="music_1786_14114_11_12"> </span></div>
+          <span class="music_1786_14115">МГАВМиБ – МВА имени К.И. Скрябина (бакалавриат)</span>
+        </div>
+        <div class="music_1786_14116"><span class="music_1786_14117">2024 - 2026</span><span class="music_1786_14118">ИТМО, Продуктовый дизайн (магистратура)</span></div>
+      </div>
+      <div class="music_1786_14127">
+        <span class="music_1786_14128">Опыт работы</span>
+        <div class="music_1786_14129">
+          <div class="music_1786_14131">
+            <div class="music_1786_14133">
+              <span class="music_1786_14137">Окт</span><span class="music_1786_14134">2024</span><svg class="music_1786_14136" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.5H13M13 4.5L9 1M13 4.5L9 8" stroke="#1f303d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="music_1786_14138">Янв</span><span class="music_1786_14135">2025</span>
+            </div>
+            <span class="music_1786_14132 itmo-trigger" onclick="document.getElementById('itmo-modal').style.display='flex'" style="cursor:pointer;">Продуктовый дизайнер ИТМО (Проектная работа)</span
+            ><svg class="music_1786_14139 itmo-trigger" onclick="document.getElementById('itmo-modal').style.display='flex'" style="cursor:pointer; width:16px; height:16px; position:absolute; top:3px; right:0; bottom:2px; flex-shrink:0;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="job-arrow" width="16" height="16" rx="2" fill="#1f303d"/><path d="M5 11L11 5M8.5 5L11 5L11 7.5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="music_1786_14130"
+            >Разрабатывал проект по улучшению пользовательского интерфейса сайта курса повышения квалификации для преподавателей дисциплин естественнонаучного профиля «Преподавать естественно!».
+            Основной задачей от заказчика являлся полный редизайн имеющегося сайта и адаптация под использование на постоянной основе. Растил основные метрики (PPV, ARPU, Page depth, NPS). Инициировал
+            и предлагал решения <br />по стандартизации повторяющихся компонентов интерфейса.</span
+          >
+        </div>
+        <div class="music_1786_14142">
+          <div class="music_1786_14144">
+            <div class="music_1786_14146">
+              <span class="music_1786_14150">Нояб</span><span class="music_1786_14147">2024</span><svg class="music_1786_14149" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.5H13M13 4.5L9 1M13 4.5L9 8" stroke="#1f303d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="music_1786_14151">Февр</span><span class="music_1786_14148">2025</span>
+            </div>
+            <span class="music_1786_14145 health-trigger" onclick="document.getElementById('health-modal').style.display='flex'" style="cursor:pointer;">Продуктовый дизайнер HealthSensor (Стартап)</span
+            ><svg class="music_1786_14152 health-trigger" onclick="document.getElementById('health-modal').style.display='flex'" style="cursor:pointer; width:16px; height:16px; position:absolute; top:3px; right:0; bottom:2px; flex-shrink:0;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="job-arrow" width="16" height="16" rx="2" fill="#1f303d"/><path d="M5 11L11 5M8.5 5L11 5L11 7.5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="music_1786_14143"
+            >Разрабатывал мобильное приложение для умного устройства, которое осуществляет систему мониторинга здоровья (измеряет пульс, давление, сатурацию, температуру). Тесно взаимодействовал с
+            командами аналитиков, маркетинга, разработчиков.</span
+          >
+        </div>
+        <div class="music_1786_14155">
+          <div class="music_1786_14157">
+            <div class="music_1786_14159">
+              <span class="music_1786_14163">Февр</span><span class="music_1786_14160">2025</span><svg class="music_1786_14162" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.5H13M13 4.5L9 1M13 4.5L9 8" stroke="#1f303d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="music_1786_14164">Июнь</span><span class="music_1786_14161">2025</span>
+            </div>
+            <span class="music_1786_14158 sogaz-trigger" onclick="document.getElementById('sogaz-modal').style.display='flex'" style="cursor:pointer;">Продуктовый дизайнер Согаз (Проектная работа)</span
+            ><svg class="music_1786_14165 sogaz-trigger" onclick="document.getElementById('sogaz-modal').style.display='flex'" style="cursor:pointer; width:16px; height:16px; position:absolute; top:3px; right:0; bottom:2px; flex-shrink:0;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="job-arrow" width="16" height="16" rx="2" fill="#1f303d"/><path d="M5 11L11 5M8.5 5L11 5L11 7.5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="music_1786_14156"
+            >Разрабатывал проект по улучшению пользовательского интерфейса сервиса продукта страхования — Страхование путешествий. Необходимо было сделать редизайн раздела “Страховка путешествий”,
+            продумать адаптацию на разных экранах.</span
+          >
+        </div>
+        <div class="music_1786_14168">
+          <div class="music_1786_14170">
+            <div class="music_1786_14172">
+              <span class="music_1786_14176">Нояб</span><span class="music_1786_14173">2025</span><svg class="music_1786_14175" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.5H13M13 4.5L9 1M13 4.5L9 8" stroke="#1f303d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="music_1786_14177">Нояб</span><span class="music_1786_14174">2025</span>
+            </div>
+            <span class="music_1786_14171 mts-trigger" onclick="document.getElementById('mts-modal').style.display='flex'" style="cursor:pointer;">Продуктовый дизайнер МТС (Хакатон)</span
+            ><svg class="music_1786_14178 mts-trigger" onclick="document.getElementById('mts-modal').style.display='flex'" style="cursor:pointer; width:16px; height:16px; position:absolute; top:3px; right:0; bottom:2px; flex-shrink:0;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="job-arrow" width="16" height="16" rx="2" fill="#1f303d"/><path d="M5 11L11 5M8.5 5L11 5L11 7.5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="music_1786_14169"
+            >Разработал проект по созданию концепции AI-компаньона пользовательского интерфейса мобильного банковского приложения. Основной задачей являлось создание идей, <br />как можно изменить или
+            доработать существующее мобильное банковское приложение <br />с помощью Al-компаньона, который учитывает эмоциональное состояние пользователя <br />и активно вовлекает его в достижение
+            финансовых целей. При этом решение должно учитывать интересы бизнеса - повысить удержание клиентов и увеличить их активность. Растил основные метрики (DAU/MAU, время в приложении, NPS).
+            Снизил уровень <br />Churn Rate.</span
+          >
+        </div>
+        <div class="music_1786_14181">
+          <div class="music_1786_14183">
+            <div class="music_1786_14184">
+              <span class="music_1786_14188">Февр</span><span class="music_1786_14185">2024</span><svg class="music_1786_14187" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.5H13M13 4.5L9 1M13 4.5L9 8" stroke="#1f303d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="music_1786_14189">Авг</span><span class="music_1786_14186">2025</span>
+            </div>
+            <span class="music_1786_14190">Графический дизайнер ChocoWomen</span>
+          </div>
+          <span class="music_1786_14182">Работал над созданием упаковок для дубайского шоколада. Подготавливал макеты <br />к печати.</span>
+        </div>
+      </div>
+      <div class="music_1786_14104">
+        <span class="music_1786_14105">Навыки</span>
+        <div class="music_1786_14106">
+          <span class="music_1786_14106_0_78">· Дизайн продукта (дизайн мышление, фокусировка на задачах бизнеса)<br />· Исследования (анализ конкурентов, интервью с пользователями, составление персон, CJM, User Flow — Полный цикл исследований)<br />· Дизайн системы (умею как работать, так и создавать)<br />· Прототипы (создание интерактивных прототипов)<br />· Тесная работа в команде<br />· Следование и помощь в поддержании дизайн-процессов</span>
+        </div>
+      </div>
+      <div class="music_1786_14107">
+        <span class="music_1786_14108">Инструменты</span
+        ><span class="music_1786_14109"
+          >· Figma (хорошо разбираюсь в ней)<br />· FigJam / Miro (для генерации идей в команде)<br />· Adobe Illustrator<br />· Blender 3d (базовый уровень)<br />· Perplexity / DeepSeek<br />· Tilda</span
+        >
+      </div>
+      <div class="music_1786_14110">
+        <span class="music_1786_14111">Хобби</span><span class="music_1786_14112">Дизайн упаковок продуктов питания, вайб-кодинг, чтение, кулинария, спорт (силовые тренировки), рыбалка.</span>
+      </div>
+    </div>
+
+    <!-- ИТМО Modal -->
+    <div id="itmo-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center;">
+      <div style="background:#1f303d; border-radius:12px; max-width:760px; width:calc(100% - 48px); max-height:85vh; overflow-y:auto; padding:48px; position:relative;">
+        <!-- Close button -->
+        <button onclick="document.getElementById('itmo-modal').style.display='none'" style="position:absolute; top:20px; right:20px; background:none; border:none; cursor:pointer; padding:4px;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="2" y1="2" x2="18" y2="18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18" y1="2" x2="2" y2="18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <!-- Header -->
+        <div style="margin-bottom:32px;">
+          <div style="font-size:18px; font-family:'Helvetica Neue',sans-serif; font-weight:400; color:#ffffff; margin-bottom:6px;">Продуктовый дизайнер ИТМО</div>
+          <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; color:rgba(255,255,255,0.45);">Окт 2024 — Янв 2025 · Проектная работа</div>
+        </div>
+        <!-- Sections -->
+        <div style="display:flex; flex-direction:column; gap:28px;">
+          <div>
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Достижения</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Заредизайнил и спроектировал разделы сайта (главная, мероприятия, курсы)<br/>
+              Масштабирование из лендинга в полноценный сайт с улучшенной навигацией и UX<br/>
+              Создал кликабельные прототипы и провел тесты — подтверждение продуктовых гипотез<br/>
+              Провел JTBD сегментацию и выделил ключевые мотивации<br/>
+              Предложенные решения повысили вовлеченность пользователей и количество участников на мероприятиях
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,0.12); padding-top:28px;">
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Чем занимался</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Провел JTBD и выделил основные сегменты пользователей<br/>
+              Сформировал портреты пользователей<br/>
+              Провел SWOT-анализ конкурентов<br/>
+              Создал User Stories<br/>
+              Спроектировал CJM, навигационную диаграмму<br/>
+              Прототипирование, проведение UX-тестов, анализ результатов<br/>
+              Разработал веб-интерфейс<br/>
+              Взаимодействал с заказчиком и презентовал ему этапы разработки
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,0.12); padding-top:28px;">
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Чему научился</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Работать с образовательными платформами<br/>
+              Глубокому анализу конкурентов<br/>
+              Выделять сегменты с помощью JTBD<br/>
+              Аргументировать решения и работать с заказчиком<br/>
+              Руководствоваться данными пользовательских исследований при принятии проектных решений
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HealthSensor Modal -->
+    <div id="health-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center;">
+      <div style="background:#1f303d; border-radius:12px; max-width:760px; width:calc(100% - 48px); max-height:85vh; overflow-y:auto; padding:48px; position:relative;">
+        <button onclick="document.getElementById('health-modal').style.display='none'" style="position:absolute; top:20px; right:20px; background:none; border:none; cursor:pointer; padding:4px;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="2" y1="2" x2="18" y2="18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18" y1="2" x2="2" y2="18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div style="margin-bottom:32px;">
+          <div style="font-size:18px; font-family:'Helvetica Neue',sans-serif; font-weight:400; color:#ffffff; margin-bottom:6px;">Продуктовый дизайнер HealthSensor</div>
+          <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; color:rgba(255,255,255,0.45);">Нояб 2024 — Февр 2025 · Стартап</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:28px;">
+          <div>
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Достижения</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Создал с нуля мобильное приложение<br/>
+              Прошел ускоренный путь проектирования (выделив сегменты пользователей и проведя анализ рынка были выдвинуты гипотезы, проверены на пользователях и спроектирована первая версия интерфейса. Далее юзабилити-тестирование, исправление ошибок и по кругу)<br/>
+              Подтвердил гипотезы через создание интерактивных прототипов и их тестирование на пользователях
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,0.12); padding-top:28px;">
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Чем занимался</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Разрабатывать и внедрять медицинский контент внутри приложения<br/>
+              Создавать дизайн-систему<br/>
+              Получил опыт в создании 3D моделей умного устройства<br/>
+              Итеративно улучшать интерфейс на основе фидбэка
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,0.12); padding-top:28px;">
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Чему научился</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Провел подробный анализ рынка (с расчетом TAM, SAM, SOM)<br/>
+              Провел SWOT-анализ конкурентов<br/>
+              Создал прототипы, провел юзабилити тестирование, анализировал результаты<br/>
+              Разработал мобильное приложение<br/>
+              Создал небольшую дизайн-систему
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Согаз Modal -->
+    <div id="sogaz-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center;">
+      <div style="background:#1f303d; border-radius:12px; max-width:760px; width:calc(100% - 48px); max-height:85vh; overflow-y:auto; padding:48px; position:relative;">
+        <button onclick="document.getElementById('sogaz-modal').style.display='none'" style="position:absolute; top:20px; right:20px; background:none; border:none; cursor:pointer; padding:4px;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="2" y1="2" x2="18" y2="18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18" y1="2" x2="2" y2="18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div style="margin-bottom:32px;">
+          <div style="font-size:18px; font-family:'Helvetica Neue',sans-serif; font-weight:400; color:#ffffff; margin-bottom:6px;">Продуктовый дизайнер Согаз</div>
+          <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; color:rgba(255,255,255,0.45);">Февр 2025 — Июнь 2025 · Проектная работа</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:28px;">
+          <div>
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Достижения</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Заредизайнил и спроектировал раздел страхования путешествий (добавил калькулятор страхования, упростил путь пользователя на всех этапах оформления страховки)<br/>
+              Создал кликабельные прототипы и провел тесты<br/>
+              Адаптировал интерфейс под разные разрешения
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,0.12); padding-top:28px;">
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Чем занимался</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Провел SWOT-анализ пяти главных конкурентов<br/>
+              Организовал глубинные интервью с пользователями / получил основные инсайты<br/>
+              Сформировал персону пользователя<br/>
+              Спроектировал CJM и User Flow пользователя<br/>
+              Разработал веб-интерфейс и адаптировал его под мобильную версию<br/>
+              Презентовал все этапы разработки заказчику
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,0.12); padding-top:28px;">
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Чему научился</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Понимать нюансы в продуктах страхования (что критично для доверия и быстрого оформления полиса)<br/>
+              Работать с большим количеством информации (оформление полиса, информирование о страховых случаях) и ожиданиями пользователя, чтобы сценарий получился логичным и без лишних шагов<br/>
+              Вырос опыт в адаптации под мобильное устройство (т.к. информации крайне много, пришлось продумывать, как видоизменятся карточки с программами страхования)<br/>
+              Повысились навыки работы конкретно с пользовательским опытом
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- МТС Modal -->
+    <div id="mts-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center;">
+      <div style="background:#1f303d; border-radius:12px; max-width:760px; width:calc(100% - 48px); max-height:85vh; overflow-y:auto; padding:48px; position:relative;">
+        <button onclick="document.getElementById('mts-modal').style.display='none'" style="position:absolute; top:20px; right:20px; background:none; border:none; cursor:pointer; padding:4px;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="2" y1="2" x2="18" y2="18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18" y1="2" x2="2" y2="18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div style="margin-bottom:32px;">
+          <div style="font-size:18px; font-family:'Helvetica Neue',sans-serif; font-weight:400; color:#ffffff; margin-bottom:6px;">Продуктовый дизайнер МТС</div>
+          <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; color:rgba(255,255,255,0.45);">Нояб 2025 · Хакатон</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:28px;">
+          <div>
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Достижения</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Принял участие в хакатоне<br/>
+              За короткий промежуток разработал качественную идею<br/>
+              Создал кликабельные прототипы экранов приложения<br/>
+              Предложил идеи для масштабирования
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,0.12); padding-top:28px;">
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Чем занимался</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Разработал JTBD<br/>
+              Провел глубинные интервью / собрал инсайты<br/>
+              Создал маскота<br/>
+              Спроектировал экраны приложения и создал анимацию появления AI-компаньона<br/>
+              Защитил идею перед заказчиком
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,0.12); padding-top:28px;">
+            <div style="font-size:16px; font-family:'Helvetica Neue',sans-serif; font-weight:500; color:#ffffff; margin-bottom:10px;">Чему научился</div>
+            <div style="font-size:14px; font-family:'Helvetica Neue',sans-serif; font-weight:400; line-height:1.7; color:#ffffff;">
+              Слаженно работать в незнакомой команде в сжатые сроки<br/>
+              Отточил навыки работы с дизайн-системой (токены, документация)<br/>
+              Углубился в продуктовом мышлении<br/>
+              Укрепил навык работы с метриками и результатами
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      ['itmo-modal','health-modal','sogaz-modal','mts-modal'].forEach(function(id) {
+        document.getElementById(id).addEventListener('click', function(e) {
+          if (e.target === this) this.style.display = 'none';
+        });
+      });
+    </script>
+  </body>
+</html>
