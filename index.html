@@ -1847,6 +1847,98 @@
           font-size: 15px !important;
         }
       }
+      /* ── Portfolio glass badge ── */
+      .portfolio-badge-wrap {
+        width: 856px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 24px;
+      }
+      .portfolio-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 7px 14px 7px 10px;
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(31, 48, 61, 0.13);
+        border-radius: 999px;
+        font-size: 12px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.07em;
+        color: #1f303d;
+        white-space: nowrap;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.2s ease, border-color 0.2s ease;
+      }
+      .portfolio-badge:hover {
+        background: rgba(255, 255, 255, 0.30);
+        border-color: rgba(31, 48, 61, 0.22);
+      }
+      .portfolio-badge__dot {
+        position: relative;
+        width: 8px;
+        height: 8px;
+        flex-shrink: 0;
+      }
+      .portfolio-badge__dot::before,
+      .portfolio-badge__dot::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: #1f303d;
+      }
+      .portfolio-badge__dot::after {
+        background: transparent;
+        border: 1.5px solid #1f303d;
+        inset: -4px;
+        animation: pb-pulse 2s ease-out infinite;
+      }
+      @keyframes pb-pulse {
+        0%   { opacity: 0.6; transform: scale(0.4); }
+        60%  { opacity: 0;   transform: scale(1.8); }
+        100% { opacity: 0;   transform: scale(1.8); }
+      }
+      .portfolio-badge__arrow {
+        width: 13px;
+        height: 13px;
+        flex-shrink: 0;
+        opacity: 0.7;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .portfolio-badge:hover .portfolio-badge__arrow {
+        transform: translateX(2px);
+        opacity: 1;
+      }
+      @media (max-width: 1024px) {
+        .portfolio-badge-wrap {
+          width: 100%;
+          max-width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+      @media (max-width: 600px) {
+        .portfolio-badge-wrap {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 16px;
+          box-sizing: border-box;
+        }
+        .portfolio-badge {
+          font-size: 11px;
+          padding: 6px 12px 6px 9px;
+          gap: 7px;
+        }
+        .portfolio-badge__dot { width: 7px; height: 7px; }
+        .portfolio-badge__dot::after { inset: -3px; }
+        .portfolio-badge__arrow { width: 11px; height: 11px; }
+      }
     </style>
   </head>
   <body>
@@ -1877,6 +1969,15 @@
             </svg>
           </a>
         </div>
+      </div>
+      <div class="portfolio-badge-wrap">
+        <a class="portfolio-badge" href="http://yachinkovsky.design.tilda.ws/" target="_blank">
+          <span class="portfolio-badge__dot"></span>
+          ПОРТФОЛИО
+          <svg class="portfolio-badge__arrow" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 10.5L10.5 2.5M10.5 2.5H5M10.5 2.5V8" stroke="#1f303d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
       <div class="music_1786_14101">
         <span class="music_1786_14102">Обо мне</span
