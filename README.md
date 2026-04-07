@@ -1,2 +1,2 @@
 # rezume-osnova
-https://nikol4y1996-png.github.io/rezume-osnova/
+https://www.ilyayachinkovsky.ru/
